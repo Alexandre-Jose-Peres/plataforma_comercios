@@ -1,0 +1,1687 @@
+/* Reset de estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Cabeçalho */
+header {
+    background: radial-gradient(circle at center, #3690ac 0%, #10064b 100%);
+    color: #ffd700;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-nav .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.header-nav .logo img {
+    width: 80px;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.navbar {
+    /*background-color: #33508a;*/
+    background-color: #F57C00;
+    padding: 5px;
+    box-shadow: 0 2px 2px #071a3f;
+}
+
+/* Navbar */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0 20px;
+    justify-content: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 6px 9px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    /* <-- Aqui está a correção */
+    transition: background 0.3s ease, transform 0.3s ease, border 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    border: 1px solid #33508a;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #071a3f;
+    /* Preto */
+    color: #ffd700;
+    /* Dourado */
+    text-align: center;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+footer a {
+    color: #ffd700;
+    /* Dourado */
+    text-decoration: none;
+    gap: 30px;
+    text-align: center;
+    display: 1;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.rede-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rede-sociais img {
+    width: 20px;
+
+}
+
+.container-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    width: 80%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #D9772B;
+    margin-top: 20px;
+}
+
+/*.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}*/
+
+.banner img {
+    width: 400px;
+
+
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.banner-content,.carousel-item {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* Dourado */
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.banner p {
+    font-size: 1.2rem;
+
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.acesso {
+    margin: 0 15px;
+}
+
+.nome-perfil {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #ffffff;
+
+}
+
+.nome-perfil p {
+    font-size: 18px;
+}
+
+.btn-cadastro,
+.btn-login,
+.btn-detales,
+.buy-button,
+.btn {
+
+    display: inline-flex;
+    /* Alinha melhor o conteúdo */
+    align-items: center;
+    /* Centraliza o texto verticalmente */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente */
+    padding: 6px 12px;
+    /* Um pouco mais de preenchimento para conforto */
+    background-color: #FFD54F;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    /* Bordas mais suaves */
+    border: 2px solid transparent;
+    /* Adiciona um efeito ao passar o mouse */
+    font-weight: bold;
+    font-size: 1rem;
+    /* Tamanho de fonte adequado */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+
+.buy-button {
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    background-color: #ff9900;
+}
+
+.btn-detales {
+    width: 100%;
+}
+
+.buy-button:hover {
+    background: #e65500;
+}
+
+.cta-btn {
+    background-color: #ffd700;
+    /* Dourado */
+    color: black;
+    padding: 10px 15px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover para os botões */
+.cta-btn:hover,
+.btn-cadastro:hover,
+.btn-login:hover,
+.btn-detales:hover {
+    background-color: #cc8e00;
+    /* Dourado mais escuro */
+}
+
+/* Seções de Benefícios */
+.benefits {
+    padding: 40px 60px;
+    text-align: center;
+    background-color: #f4f4f4;
+    /* Fundo cinza claro, neutro e suave */
+    color: #071a3f;
+    /* Texto em azul escuro para contraste */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/*.benefits {
+    padding: 40px 20px;
+    text-align: center;
+
+    background-color: #ffffff; 
+    color: #071a3f; 
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #cc8e00; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}*/
+
+/* Estilo para as seções de benefícios */
+.benefits .content {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente o conteúdo */
+    justify-content: space-between;
+    /* Espaçamento entre imagem e texto */
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.benefits .content .image {
+    flex: 1;
+    /* A imagem ocupa o espaço proporcionalmente menor */
+    margin-right: 20px;
+    /* Adiciona um espaço entre a imagem e o texto */
+    height: 300px;
+    /* Altura fixa */
+    overflow: hidden;
+    /* Garante que o conteúdo extra da imagem seja escondido */
+}
+
+.benefits .content .text {
+    flex: 2;
+    /* O texto ocupa mais espaço que a imagem */
+    max-width: 70%;
+    /* Limita a largura do texto */
+}
+
+
+.benefits .content .text li {
+    list-style: none;
+}
+
+/* Fazendo com que a imagem se ajuste proporcionalmente */
+.benefits .content .image img {
+    width: 100%;
+    /* A imagem ocupa 100% da largura do seu contêiner */
+    height: 100%;
+    /* A altura da imagem será 100% do contêiner da imagem */
+    object-fit: cover;
+    /* Faz com que a imagem preencha o contêiner, sem distorcer, mas pode cortar partes dela */
+}
+
+
+.benefits h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #D9772B;
+    /* Título em laranja queimado */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.benefits ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.benefits ul li strong {
+    color: #cc8e00;
+    /* Amarelo dourado para destacar pontos importantes */
+}
+
+
+.main-container {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+    gap: 50px;
+
+}
+
+/* Define um grid responsivo */
+#product {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    width: 100%;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+/* Define um grid responsivo */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    padding: 50px;
+
+}
+
+.comercios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    max-width: 1300px;
+    gap: 15px;
+}
+
+
+
+.product-card {
+    overflow: visible;
+    position: relative;
+    background-color: #fff;
+    /* branco puro costuma valorizar mais o conteúdo */
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 0 16px;
+    max-width: 300px;
+    width: 250px;
+    gap: 12px;
+    word-wrap: break-word;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.product-img {
+    margin-top: 16px;
+}
+
+.product-card h4 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 10px;
+    margin-top: 10px;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limita a 3 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    white-space: normal;
+    /* Importante: permite quebras de linha */
+    word-wrap: break-word;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limita a 3 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    white-space: normal;
+    /* Importante: permite quebras de linha */
+    word-wrap: break-word;
+}
+
+.product-card .price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #43A047;
+}
+
+/* Ajusta o tamanho da imagem para evitar distorção */
+.foto-produto,
+.comercio-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.comercio-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.status {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.aberto {
+    color: #28a745;
+    /* Verde */
+    background-color: #d4edda;
+}
+
+.fechado {
+    color: #dc3545;
+    /* Vermelho */
+    background-color: #f8d7da;
+}
+
+.comercio-info {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.comercio-info img {
+    width: 100%;
+}
+
+.comercio-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.comercio-nome {
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #204181;
+    /* Dourado */
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.comercio-desc {
+    font-size: 1rem;
+    color: #555;
+}
+
+.comercio-endereco,
+.comercio-cidade,
+.comercio-telefone {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.comercio-telefone {
+    color: #1c9c5b;
+    font-weight: bold;
+}
+
+/* Estilização do container */
+.cid-end {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.container-politica {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.details {
+    width: 50%;
+    display: flex;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    overflow: hidden;
+    /* Evita que a imagem ultrapasse os limites da div */
+    border-radius: 8px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.image-section:hover img {
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% */
+}
+
+
+
+.details-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.price-section {
+    flex: 1;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #33508a;
+    gap: 20px;
+}
+
+.price-section h2 {
+    color: #1c9c5b;
+}
+
+
+.details-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    /* Garante que o título não ultrapasse a div */
+}
+
+
+
+.details-section p {
+    font-size: 1.2rem;
+    /* 19px */
+    color: #555;
+    line-height: 1.5;
+}
+
+/* index*/
+
+/* Estilos gerais para a seção */
+.produtos-carrossel {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    height: 240px;
+}
+
+.produtos-carrossel h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contêiner do carrossel */
+.carrossel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.carrossel a {
+    text-decoration: none;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+
+.carrossel .item-produto {
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tornando os produtos circulares */
+.carrossel .item-produto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* Para garantir que a imagem fique bem cortada dentro do círculo */
+    border-radius: 50%;
+    /* Fazendo a borda circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.carrossel .item-produto h4 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+}
+
+.carrossel .item-produto span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-top: 5px;
+}
+
+/* Botões de navegação (esquerda e direita) */
+.promo-prev,
+.promo-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.promo-prev {
+    left: 10px;
+}
+
+.promo-next {
+    right: 10px;
+}
+
+.promo-prev:hover,
+.promo-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.vitrine-produtos {
+    display: flex;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+
+.produtos-dest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Estilos para o Carrossel */
+.carrossel {
+    display: flex;
+    overflow-x: auto;
+    /* Permite o scroll horizontal */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    scroll-behavior: smooth;
+    /* Suaviza o movimento ao rolar */
+    padding: 20px 0;
+    /* Espaçamento acima e abaixo */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Esconder a barra de rolagem */
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.item {
+
+    /* Impede que os itens se redimensionem */
+    width: 230px;
+    /* Largura fixa dos itens do carrossel */
+    text-align: center;
+    background-color: #f9f9f9;
+    /* Cor de fundo dos itens */
+    padding: 0 5px;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.3s ease;
+    /* Efeito suave ao passar o mouse */
+}
+
+
+
+/* Imagem com tamanho fixo e bordas arredondadas */
+.item img {
+    width: 100%;
+    /* A imagem ocupará toda a largura do item */
+    height: 150px;
+    /* Definir uma altura fixa para todas as imagens */
+    object-fit: cover;
+    /* Garantir que a imagem cubra o espaço sem deformar */
+    border-radius: 8px;
+    /* Bordas arredondadas na imagem */
+    margin-bottom: 15px;
+    /* Espaço abaixo da imagem */
+}
+
+.item h4 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    /* Quebra palavras longas */
+    white-space: nowrap;
+    /* Evita quebra automática de linha */
+}
+
+
+/* Estilo para o preço do produto */
+.item p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c9c5b;
+    margin-bottom: 10px;
+}
+
+/* Filtro de categorias */
+.filtro-categorias {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.filtro-categorias button {
+    background-color: #ff9900;
+    /* Cor do botão */
+    color: white;
+    /* Cor do texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.filtro-categorias button:hover {
+    background-color: #e87a00;
+    /* Cor do botão ao passar o mouse */
+}
+
+.paginacao-produtos,
+.pagination {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.paginacao-produtos button,
+.pagination a {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.paginacao-produtos button:hover,
+.pagination a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.paginacao-produtos button[style*="font-weight:bold"] {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border-color: #0056b3;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border-color: #0056b3;
+}
+
+/* Estilo do formulário de pesquisa */
+#searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo do campo de pesquisa */
+form input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px 0 0 30px;
+    padding: 10px;
+}
+
+/* Estilo do botão de pesquisa */
+form button {
+    padding: 5px 10px;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #e65500;
+}
+
+/* Estilizando o SVG do ícone */
+svg {
+    fill: #ffffff;
+    /* Cor verde para o ícone */
+    width: 25px;
+    height: 25px;
+    transition: fill 0.3s ease;
+}
+
+/* Mudando a cor do ícone ao passar o mouse */
+.icon-container:hover svg {
+    fill: #2e7d32;
+    /* Cor verde mais escura quando hover */
+}
+
+
+.avaliacao {
+    margin-top: 10px;
+}
+
+.grafico-avaliacoes {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 10;
+    top: 30px;
+    left: 0;
+}
+
+.estrelas {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid #0056b3;*/
+    display: flex;
+    align-items: center;
+}
+
+.quantidade-avaliacoes {
+    margin-left: 20px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.estrelas:hover .grafico-avaliacoes {
+    display: block;
+}
+
+.estrela {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+
+.estrela.dourada {
+    color: gold !important;
+
+}
+
+
+
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.modal .fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal p {
+    color: red;
+    font-size: 15px;
+}
+
+#logoutModal button {
+    padding: 8px 16px;
+    background-color: #071a3f;
+    color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutModal button:hover {
+    background-color: #0a2254;
+}
+
+
+
+/* Menu flutuante com gráfico */
+.grafico-avaliacoes {
+    display: none;
+    position: absolute;
+    top: 130%;
+    /* afasta da média */
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    max-width: 100vw;
+    max-height: 300px;
+    /* Evita que ultrapasse demais */
+    overflow-y: auto;
+    /* Permite rolagem se necessário */
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+
+
+/* Barras horizontais */
+.barra-avaliacao-horizontal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.label-nota {
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.barra-container-horizontal {
+    flex: 1;
+    background: #eee;
+    height: 14px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.barra-horizontal {
+    background: #f39c12;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.porcentagem {
+    width: 45px;
+    text-align: left;
+    font-size: 13px;
+}
+
+/* === BANNER DE COOKIES === */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: #0A1744;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+}
+
+.cookie-banner.ativo {
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 0 -2px 20px rgba(0, 200, 150, 0.3);
+    /* glow suave */
+}
+
+/* === BOTÕES === */
+.cookie-banner .btns button,
+.modal .buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accept-btn {
+    background: #00C896;
+    color: white;
+}
+
+.reject-btn {
+    background: #FF4E4E;
+    color: white;
+}
+
+.settings-btn {
+    background: #FFA500;
+    color: white;
+}
+
+.cookie-banner .btns button:hover,
+.modal .buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === MODAL DE PREFERÊNCIAS === */
+.modal {
+    display: none;
+    /* escondido inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 10000;
+    justify-content: center;
+    align-items: flex-start;
+    /* Alinha o conteúdo no topo */
+    padding-top: 100px;
+    /* Distância do topo */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    animation: zoomIn 0.3s forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Efeitos encadeados nos elementos internos do modal */
+.modal-content h2,
+.modal-content .switch,
+.modal-content .buttons {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.3s forwards;
+}
+
+.modal-content h2 {
+    animation-delay: 0.1s;
+}
+
+.modal-content .switch:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+
+.modal-content .switch:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.modal-content .switch:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.modal-content .buttons {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === SWITCH DE PREFERÊNCIAS === */
+.switch {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === BOTÕES DENTRO DO MODAL === */
+.modal .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* === BOTÃO FLOTANTE DE PREFERÊNCIAS === */
+.floating-preferences-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    z-index: 999;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.floating-preferences-btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-Preferencia {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #0A1744;
+    color: white;
+    z-index: 999;
+}
+
+@media (max-width: 989px) {
+    .main-container {
+        padding: 60px 20px;
+    }
+
+    .product-card {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .header-nav .logo img {
+        width: 70px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 1000;
+
+    }
+
+    .nav-links.active {
+        transform: translateX(-2.6%);
+
+    }
+
+    .nav-links a {
+        opacity: 0;
+        color: #FFD54F;
+        transform: translateX(50px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav-links.active li:nth-child(1) a {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active li:nth-child(2) a {
+        transition-delay: 0.4s;
+    }
+
+    .nav-links.active li:nth-child(3) a {
+        transition-delay: 0.6s;
+    }
+
+    .nav-links.active li:nth-child(4) a {
+        transition-delay: 0.8s;
+    }
+
+    .nav-links.active li:nth-child(5) a {
+        transition-delay: 1s;
+    }
+
+    .nav-links.active li:nth-child(6) a {
+        transition-delay: 1.2s;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: #ffd700;
+        /* Dourado */
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        z-index: 2000;
+    }
+
+    .image-section img {
+        max-width: 400px;
+    }
+
+    #container {
+        padding: 10px 5px;
+
+    }
+
+    .details-section h1 {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    .details-section p {
+        font-size: 1rem;
+        /* 16px */
+    }
+
+    .buy-button,
+    .btn-cadastro,
+    .btn-login,
+    .btn-detales {
+        font-size: 10px;
+
+    }
+
+    .cta-btn {
+        background-color: #FFD54F;
+        /* Dourado */
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .details {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nome-perfil {
+        margin-right: 20px;
+    }
+
+    /*index */
+    .produtos-carrossel h3 {
+        font-size: 1.5rem;
+    }
+
+    .carrossel .item-produto {
+        min-width: 200px;
+    }
+
+    .carrossel .item-produto img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carrossel {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        /* Impede que os itens quebrem linha */
+        overflow-x: auto;
+        /* Adiciona rolagem horizontal */
+        scroll-snap-type: x mandatory;
+        /* Faz a rolagem ser mais fluida */
+        gap: 10px;
+        /* Adiciona espaçamento entre os itens */
+    }
+
+    .carrossel::-webkit-scrollbar {
+        display: none;
+        /* Oculta a barra de rolagem no Chrome, Safari e Edge */
+    }
+
+    .item {
+        width: 130px;
+        height: 210px;
+        flex: 0 0 auto;
+        /* Impede que os itens redimensionem automaticamente */
+        scroll-snap-align: start;
+        /* Alinha os itens na rolagem */
+    }
+
+    .item img {
+        height: 60px;
+    }
+
+    .filtro-categorias button {
+        font-size: 10px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        font-size: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: 10px;
+    }
+
+
+    .benefits .content {
+        flex-direction: column;
+        /* Muda a direção para coluna em telas pequenas */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .benefits .content .image {
+        margin-right: 0;
+        /* Remove o espaçamento da imagem */
+        margin-bottom: 20px;
+        /* Adiciona um espaçamento abaixo da imagem */
+    }
+
+
+    #searchForm {
+        display: none;
+    }
+
+    #search {
+        width: 50%;
+    }
+
+    .filtro-categorias button,
+    .paginacao-produtos button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .product-list {
+        padding: 0 20px;
+    }
+}
+
+/* Menu Responsivo */
+@media (max-width: 500px) {
+
+    .product-card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Ajuste do menu responsivo */
+    .nav-links.active {
+        transform: translateX(-4.9%);
+        /* valor mais suave para telas pequenas */
+    }
+
+    .product-img,
+    .product-desc {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .image-section img {
+        max-width: 300px;
+    }
+
+    .details {
+        width: 50%;
+    }
+
+    .price-tag {
+        font-size: 1rem;
+    }
+
+    .buy-button {
+        font-size: 1rem;
+        padding: 2px 2px;
+    }
+
+    .details-section h1 {
+        font-size: 1.2rem;
+    }
+
+    .details-section p {
+        font-size: 0.9rem;
+    }
+
+    .buy-button,
+    .btn-cadastro,
+    .btn-login,
+    .btn-detales {
+        font-size: 0.9rem;
+        padding: 3px 6px;
+    }
+
+    .banner {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .produtos-carrossel h3 {
+        font-size: 1.2rem;
+    }
+
+    .carrossel .item-produto {
+        min-width: 150px;
+    }
+
+    .carrossel .item-produto img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .promo-prev,
+    .promo-next {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    #search {
+        display: none;
+    }
+
+    #searchForm {
+        display: flex;
+        width: 90%;
+        border-radius: 30px 0 0 30px;
+    }
+
+    form input[type="text"] {
+        width: 30%;
+    }
+
+    .grafico-avaliacoes {
+        left: -140px;
+    }
+
+    .comercio-info {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 400px) {
+
+    .product-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buy-button,
+    .btn-cadastro,
+    .btn-login,
+    .btn-detales {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    #searchForm {
+        display: flex;
+        width: 80%;
+        border-radius: 30px 0 0 30px;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+    }
+
+    /* Ajuste do menu para telas ainda menores */
+    .nav-links.active {
+        transform: translateX(-5.3%);
+    }
+
+}

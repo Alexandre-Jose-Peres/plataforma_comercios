@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    align-items: center;
+    margin: 30px;
+}
+
+form h2{
+    margin-bottom: 20px;
+}
+
+/* Container para a imagem */
+.container_image {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Área de upload da imagem */
+.upload-area {
+    border: 2px dashed #007bff;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f0f8ff;
+}
+
+.upload-area label {
+    font-size: 16px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.upload-area input[type="file"] {
+    width: 100%;
+    height: 300px;
+    display: none;
+}
+
+
+.upload-area:hover {
+    background-color: #e6f7ff;
+}
+
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+input[type="button"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo dos botões */
+#button_cad {
+    background-color: #071a3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+}
+
+#button_cad:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a área de telefone */
+.tel {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo de cada grupo de informações */
+.grupo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+.grupo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-section {
+    width: 100%;
+    display: flex;
+}
+
+.form-group {
+    width: 50%;
+}
+
+/* Estilo para exibição da imagem */
+#imagePreview {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+
+/* Estilo para campos desabilitados */
+input[disabled] {
+    background-color: #e9ecef;
+}
+
+/* Adicionar um estilo para os campos de entrada de CEP */
+#cep {
+    width: auto;
+    display: inline-block;
+    max-width: 200px;
+}
+
+/* Adicionar bordas suaves para campos de entrada */
+input,
+#cep {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+#cep:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+
+    }
+
+    .container_image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-area {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .grupo {
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .form-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    input #cep {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+    }
+
+    .upload-area {
+        padding: 15px;
+    }
+
+    .grupo label {
+        font-size: 12px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    #cep {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}

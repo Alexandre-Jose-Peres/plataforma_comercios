@@ -1,0 +1,76 @@
+/* Carrossel */
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    margin: 0;
+}
+
+/* Carrossel principal */
+#carrossel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;        /* Evita usar 'top' com position relative */
+}
+
+/* Container de slides */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 250px;
+   
+    
+}
+
+/* Slide individual */
+.carousel-item {
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Imagem do slide */
+.carousel-item img {
+    width: 100%;
+    height: 100%;            /* Preenche completamente o espaço do slide */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Botão do carrossel ao passar o mouse */
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Botão dentro da legenda */
+.caption .button-b {
+    position: absolute;
+    background-color: #FCD53F;
+    padding: 10px 20px;
+    text-decoration: none;
+    top: 70%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.caption{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Título da legenda */
+.caption h2 {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff6a36;
+    text-align: center;
+    z-index: 2;
+}

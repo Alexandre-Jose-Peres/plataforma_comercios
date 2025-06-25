@@ -1,0 +1,124 @@
+/* Definição de cores e fonte */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    
+    color: #141414;
+    text-shadow: 0 0 1px #395257, 0 0 1px #07373d;
+}
+
+/* Layout com imagem lateral */
+.login-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo da imagem na lateral */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo do formulário */
+.form-container {
+    max-width: 500px;
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+}
+
+/* Estilos adicionais para o formulário */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    border-color: #007bff;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #071a3f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #0e2a63;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
